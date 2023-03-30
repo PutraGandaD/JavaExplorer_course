@@ -15,9 +15,11 @@ public class ShopApp {
         int measurement = 4;
         
         Customer c1 = new Customer();
-        
+          
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
+        
+        Clothing items[] = {item1, item2};
         
         item1.description = "Blue Jacket";
         item1.price = 20.9;
@@ -53,7 +55,6 @@ public class ShopApp {
         customers = ((2 * item2.price) + item1.price);
         total = (customers * tax) + customers;
         System.out.println("Total = " + total);
-        
     }
     
 }
