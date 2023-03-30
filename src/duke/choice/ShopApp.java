@@ -23,9 +23,11 @@ public class ShopApp {
         //Clothing
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
+        Clothing item3 = new Clothing();
+        Clothing item4 = new Clothing();
         
         //Clothing items
-        Clothing items[] = {item1, item2}; //using array
+        Clothing items[] = {item1, item2, item3, item4}; //using array
         
         item1.description = "Blue Jacket";
         item1.price = 20.9;
@@ -34,7 +36,16 @@ public class ShopApp {
         item2.description = "Orange T-Shirt";
         item2.price = 10.5;
         item2.size = "S";
-  
+        
+        //another way to access array's value using arrayvariablename[i]
+        items[2].description = "Green Scarf";
+        items[2].price = 5;
+        items[2].size = "S";
+        
+        items[3].description = "Blue T-Shirt";
+        items[3].price = 10.5;
+        items[4].size = "S";
+        
         switch(measurement) { // using switch flow control
             case 1,2,3:
                 c1.size = "S";
@@ -61,8 +72,10 @@ public class ShopApp {
         
         //using for-each loops for running price and syso each items of Clothing
         for(Clothing item : items) {
-            System.out.println(item.description + ", " + item.price + ", " + item.size);
-            total += (item.price * tax) + item.price;
+            if (c1.size.equals(item.size)) {
+                total += (item.price * tax) + item.price;
+                System.out.println(item.description + ", " + item.price + ", " + item.size);
+            }
         };
         System.out.println("Total = " + total);
     }
