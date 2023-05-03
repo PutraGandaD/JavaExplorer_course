@@ -9,75 +9,55 @@ public class ShopApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        double tax = 0.2;
-        double total = 0;
-        double customers;
-        int measurement = 4;
+        int total = 0;
+        int measurement = 3;
         
-        //Customer
+        //Customer objects
+        // created one object from Customer class (blueprint)
         Customer c1 = new Customer();
         
-        c1.name = "Pinky";     
-        c1.size = "S";
+        c1.setName("Pinky"); //customer's name
+        c1.setSize("S"); //customer's body size
+        c1.setSize(measurement); //customer's body size (used measurement value)
           
-        //Clothing
+        //Clothing objects
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
         Clothing item3 = new Clothing();
         Clothing item4 = new Clothing();
         
-        //Clothing items
+        //Clothing items array
         Clothing items[] = {item1, item2, item3, item4}; //using array
         
-        item1.description = "Blue Jacket";
-        item1.price = 20.9;
-        item1.size = "M";
-        
-        item2.description = "Orange T-Shirt";
-        item2.price = 10.5;
-        item2.size = "S";
+        item1.setDescription("Blue Jacket");
+        item1.setPrice(11);
+        item1.setSize("S");
+
+        item2.setDescription("Orange T-Shirt");
+        item2.setPrice(12);
+        item2.setSize("M");
         
         //another way to access array's value using arrayvariablename[i]
-        items[2].description = "Green Scarf";
-        items[2].price = 5;
-        items[2].size = "S";
+        items[2].setDescription("Green Scarf");
+        items[2].setPrice(13);
+        items[2].setSize("L");
         
-        items[3].description = "Blue T-Shirt";
-        items[3].price = 10.5;
-        items[4].size = "S";
-        
-        switch(measurement) { // using switch flow control
-            case 1,2,3:
-                c1.size = "S";
-                break;
-            case 4,5,6:
-                c1.size = "M";
-                break;
-            case 7,8,9:
-                c1.size = "L";
-                break;
-            default:
-                c1.size = "X";
-        }
+        items[3].setDescription("Blue T-Shirt");
+        items[3].setPrice(5);
+        items[3].setSize("XL");
         
         // syso for intro
         System.out.println("Welcome to the Duke Choice Shop");
-        System.out.println("Hello, " + c1.name);
-        System.out.println("Your body measurement size = " + c1.size);
-//        System.out.println("1. " + item1.description + ", " + item1.price + ", " + item1.size + ".");
-//        System.out.println("2. " + item2.description + ", " + item2.price + ", " + item2.size + ".");
-        
-//        customers = ((2 * item2.price) + item1.price);
-//        total = (customers * tax) + customers;
+        System.out.println("Hello, " + c1.getName());
+        System.out.println("Your body measurement size = " + c1.getSize());
         
         //using for-each loops for running price and syso each items of Clothing
         for(Clothing item : items) {
-            if (c1.size.equals(item.size)) {
-                total += (item.price * tax) + item.price;
-                System.out.println(item.description + ", " + item.price + ", " + item.size);
+            if (c1.getSize().equals(item.getSize())) {
+                total += item.getPrice();
+                System.out.println(item.getDescription() + ", " + item.getPrice() + ", " + item.getSize());
             }
-        };
+        }
         System.out.println("Total = " + total);
     }
-    
 }
