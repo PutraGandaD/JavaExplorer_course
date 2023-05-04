@@ -9,7 +9,6 @@ public class ShopApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int total = 0;
         int measurement = 3;
         
         //Customer objects
@@ -45,19 +44,20 @@ public class ShopApp {
         items[3].setDescription("Blue T-Shirt");
         items[3].setPrice(5);
         items[3].setSize("XL");
+               
+        c1.addItems(items); //add items array to the c1, using method invocation
         
         // syso for intro
         System.out.println("Welcome to the Duke Choice Shop");
         System.out.println("Hello, " + c1.getName());
         System.out.println("Your body measurement size = " + c1.getSize());
-        
+        System.out.println("Total cost for the items that you've purchased = " + c1.getTotalClothingCost());
+        System.out.println ("Items List = ");
         //using for-each loops for running price and syso each items of Clothing
-        for(Clothing item : items) {
-            if (c1.getSize().equals(item.getSize())) {
-                total += item.getPrice();
-                System.out.println(item.getDescription() + ", " + item.getPrice() + ", " + item.getSize());
-            }
+        for(Clothing item : c1.getItems()) {
+            System.out.println(item.getDescription());
         }
-        System.out.println("Total = " + total);
+        
+       
     }
 }
