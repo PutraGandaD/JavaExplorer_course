@@ -55,7 +55,9 @@ public class ShopApp {
         System.out.println ("Items List = ");
         //using for-each loops for running price and syso each items of Clothing
         for(Clothing item : c1.getItems()) {
-            System.out.println(item.getDescription());
+            if(c1.getSize().equals(item.getSize())) {
+                System.out.println(item.getDescription());
+            }
         }
         
        
