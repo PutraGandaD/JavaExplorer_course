@@ -26,8 +26,15 @@ public class Customer {
         double total = 0.0;
         
         //using for-each loops for running price and syso each items of Clothing
+//        for(Clothing item : items) {
+//            total += item.getPrice();
+//        }
+//        return total;
+        
         for(Clothing item : items) {
-            total += item.getPrice();
+            if(size.equals(item.getSize())) {
+                total += item.getPrice();
+            }
         }
         return total;
     }
