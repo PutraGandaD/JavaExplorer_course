@@ -12,7 +12,14 @@ package duke.choice;
 public class Customer {
     private String name; // represents the object's state
     private String size;
+    //private int measurement;
     private Clothing[] items;
+
+    public Customer(String name, int measurement) {
+        this.name = name;
+        //this.measurement = measurement;
+        setSize(measurement);
+    }
 
     public void addItems(Clothing[] someItems) {
         items = someItems;
@@ -24,12 +31,6 @@ public class Customer {
     
     public double getTotalClothingCost() {
         double total = 0.0;
-        
-        //using for-each loops for running price and syso each items of Clothing
-//        for(Clothing item : items) {
-//            total += item.getPrice();
-//        }
-//        return total;
         
         for(Clothing item : items) {
             if(size.equals(item.getSize())) {
@@ -70,5 +71,13 @@ public class Customer {
                 setSize("XL");
         }
     }
+
+//    public int getMeasurement() {
+//        return measurement;
+//    }
+//
+//    public void setMeasurement(int measurement) {
+//        this.measurement = measurement;
+//    }
     
 }

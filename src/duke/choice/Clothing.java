@@ -10,11 +10,18 @@ package duke.choice;
  */
 public class Clothing {
     private String description;
-    private double price = 10;
-    private String size = "M"; 
+    private String size;
+    private double price;
     
     public final int minPrice = 10;
     public final double tax = 0.2;
+
+    public Clothing(String description, double price, String size) {
+        this.description = description;
+        this.price = price;
+        this.size = size;
+    }
+    
 
     public String getDescription() {
         return description;

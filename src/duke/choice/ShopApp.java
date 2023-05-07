@@ -9,41 +9,38 @@ public class ShopApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int measurement = 3;
         
         //Customer objects
         // created one object from Customer class (blueprint)
-        Customer c1 = new Customer();
+        Customer c1 = new Customer("Pinky", 6);
         
-        c1.setName("Pinky"); //customer's name
-        c1.setSize("S"); //customer's body size
-        c1.setSize(measurement); //customer's body size (used measurement value)
-          
+//        c1.setSize(c1.getMeasurement());
+        
         //Clothing objects
-        Clothing item1 = new Clothing();
-        Clothing item2 = new Clothing();
-        Clothing item3 = new Clothing();
-        Clothing item4 = new Clothing();
+        Clothing item1 = new Clothing("Blue Jacket", 11, "S");
+        Clothing item2 = new Clothing("Orange T-Shirt", 12, "M");
+        Clothing item3 = new Clothing("Green Scarf", 13, "L");
+        Clothing item4 = new Clothing("Blue T-Shirt", 5, "XL");
         
         //Clothing items array
         Clothing items[] = {item1, item2, item3, item4}; //using array
-        
-        item1.setDescription("Blue Jacket");
-        item1.setPrice(11);
-        item1.setSize("S");
-
-        item2.setDescription("Orange T-Shirt");
-        item2.setPrice(12);
-        item2.setSize("M");
-        
-        //another way to access array's value using arrayvariablename[i]
-        items[2].setDescription("Green Scarf");
-        items[2].setPrice(13);
-        items[2].setSize("L");
-        
-        items[3].setDescription("Blue T-Shirt");
-        items[3].setPrice(5);
-        items[3].setSize("XL");
+//        
+//        item1.setDescription("Blue Jacket");
+//        item1.setPrice(11);
+//        item1.setSize("S");
+//
+//        item2.setDescription("Orange T-Shirt");
+//        item2.setPrice(12);
+//        item2.setSize("M");
+//        
+//        //another way to access array's value using arrayvariablename[i]
+//        items[2].setDescription("Green Scarf");
+//        items[2].setPrice(13);
+//        items[2].setSize("L");
+//        
+//        items[3].setDescription("Blue T-Shirt");
+//        items[3].setPrice(5);
+//        items[3].setSize("XL");
         
         // syso for intro
         System.out.println("Welcome to the Duke Choice Shop");
@@ -60,7 +57,5 @@ public class ShopApp {
                 System.out.println(item.getDescription());
             }
         }
-        
-       
     }
 }
