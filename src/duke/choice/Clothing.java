@@ -13,8 +13,8 @@ public class Clothing {
     private String size;
     private double price;
     
-    public final int minPrice = 10;
-    public final double tax = 0.2;
+    public static int minPrice = 10;
+    public static double tax = 0.2;
 
     public Clothing(String description, double price, String size) {
         this.description = description;

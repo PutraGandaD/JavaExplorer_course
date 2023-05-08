@@ -44,6 +44,7 @@ public class ShopApp {
         
         // syso for intro
         System.out.println("Welcome to the Duke Choice Shop");
+        System.out.println("Minimum price = " + Clothing.minPrice);
         System.out.println("Hello, " + c1.getName());
         System.out.println("Your body measurement size = " + c1.getSize());
         
