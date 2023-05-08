@@ -13,8 +13,8 @@ public class Clothing {
     private String size;
     private double price;
     
-    public static int minPrice = 10;
-    public static double tax = 0.2;
+    public final static int MIN_PRICE = 10;
+    public final static double TAX_RATE = 0.2;
 
     public Clothing(String description, double price, String size) {
         this.description = description;
@@ -32,11 +32,11 @@ public class Clothing {
     }
 
     public double getPrice() {
-        return price + (price*tax);
+        return price + (price*TAX_RATE);
     }
 
     public void setPrice(double newPrice) { 
-        price = (newPrice > minPrice) ? newPrice : minPrice; //ternary
+        price = (newPrice > MIN_PRICE) ? newPrice : MIN_PRICE; //ternary
     }
 
     public String getSize() {
@@ -45,6 +45,6 @@ public class Clothing {
 
     public void setSize(String size) {
         this.size = size;
-    }
-    
+    }  
+
 }

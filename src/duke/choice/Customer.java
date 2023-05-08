@@ -80,4 +80,25 @@ public class Customer {
 //        this.measurement = measurement;
 //    }
     
+    public int getItemCounter() {
+        int counter = 0;
+        
+        for (Clothing item : items) 
+        {
+            if (size.equals(item.getSize())) {
+                counter++;
+            }
+        }
+        
+        return counter;
+    }
+    
+    public double getAveragePrice(Clothing[] someItems) {
+        double avgPrice;
+        
+        avgPrice = getTotalClothingCost() / getItemCounter();
+        
+        return avgPrice;
+    }
+    
 }
