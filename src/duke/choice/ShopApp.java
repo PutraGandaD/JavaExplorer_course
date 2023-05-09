@@ -1,5 +1,7 @@
 package duke.choice;
 
+import java.util.Arrays;
+
 /**
  *
  * @author putragandadewata
@@ -19,7 +21,7 @@ public class ShopApp {
         //Clothing objects
         Clothing item1 = new Clothing("Blue Jacket", 11, "S");
         Clothing item2 = new Clothing("Orange T-Shirt", 12, "M");
-        Clothing item3 = new Clothing("Green Scarf", 13, "M");
+        Clothing item3 = new Clothing("Green Scarf", 13, "L");
         Clothing item4 = new Clothing("Blue T-Shirt", 5, "XL");
         
         //Clothing items array
@@ -46,6 +48,7 @@ public class ShopApp {
         System.out.println("Welcome to the Duke Choice Shop");
         System.out.println("Minimum price = " + Clothing.MIN_PRICE);
         System.out.println("List of available items that you can purchase = ");
+        Arrays.sort(items); // sorted the items array, invoke compareTo method
         for(Clothing item : items) {
             System.out.println(item);
         }
