@@ -45,6 +45,12 @@ public class ShopApp {
         // syso for intro
         System.out.println("Welcome to the Duke Choice Shop");
         System.out.println("Minimum price = " + Clothing.MIN_PRICE);
+        System.out.println("List of available items that you can purchase = ");
+        for(Clothing item : items) {
+            System.out.println(item);
+        }
+        
+        System.out.println("");
         System.out.println("Hello, " + c1.getName());
         System.out.println("Your body measurement size = " + c1.getSize());
         
@@ -52,7 +58,8 @@ public class ShopApp {
         System.out.println("Total cost for the items that you've purchased = " + c1.getTotalClothingCost());
         System.out.println("The amount of item you've purchased = " + c1.getItemCounter());
         
-        System.out.println ("Items List = ");
+        System.out.println("");
+        System.out.println ("List of the items that you've purchased = ");
         //using for-each loops for running price and syso each items of Clothing
         for(Clothing item : c1.getItems()) {
             if(c1.getSize().equals(item.getSize())) {

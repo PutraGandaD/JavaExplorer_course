@@ -97,7 +97,7 @@ public class Customer {
         double avgPrice;
         
         avgPrice = getTotalClothingCost() / getItemCounter();
-        
+         
         return avgPrice;
     }
     
